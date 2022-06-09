@@ -14,7 +14,7 @@ internal static class ModelExtension
     /// </summary>
     internal static void CreateSqlServerConnection(this DbContextOptionsBuilder optionsBuilder, string userSecretId, string connectionName, string migrationAssemblyName)
     {
-        if (!optionsBuilder.IsConfigured)
+        if (optionsBuilder.IsConfigured is not true)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder().AddUserSecrets(userSecretId).Build();
             optionsBuilder.UseSqlServer(configuration.GetConnectionString(connectionName), o => o.MigrationsAssembly(migrationAssemblyName));
