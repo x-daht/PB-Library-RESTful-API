@@ -9,7 +9,7 @@ namespace Pagination;
 /// </summary>
 public sealed class Page<TEntity> where TEntity : class
 {
-    public string DateOfRequest { get; set; }
+    public string DateOfRequest { get; init; }
 
     public int TotalPages { get; init; }
     
