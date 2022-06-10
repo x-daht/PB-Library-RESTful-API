@@ -5,7 +5,11 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data-Access", "Data-Access", "{28F6DC3A-EF00-45D2-8AE0-B737FABB9C7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{2F6C9282-2798-4450-AA73-557D6BE4AA70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{2F6C9282-2798-4450-AA73-557D6BE4AA70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0EDA4B0B-8CC1-43FD-B228-304E56A01F6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pagination", "Pagination\Pagination.csproj", "{C7EB8B5E-5377-4AAC-B910-795B90033A05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{2F6C9282-2798-4450-AA73-557D6BE4AA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F6C9282-2798-4450-AA73-557D6BE4AA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F6C9282-2798-4450-AA73-557D6BE4AA70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7EB8B5E-5377-4AAC-B910-795B90033A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7EB8B5E-5377-4AAC-B910-795B90033A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7EB8B5E-5377-4AAC-B910-795B90033A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7EB8B5E-5377-4AAC-B910-795B90033A05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2F6C9282-2798-4450-AA73-557D6BE4AA70} = {28F6DC3A-EF00-45D2-8AE0-B737FABB9C7F}
+		{C7EB8B5E-5377-4AAC-B910-795B90033A05} = {0EDA4B0B-8CC1-43FD-B228-304E56A01F6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D112A80-172E-4E04-8E7B-F893AF1D5855}
