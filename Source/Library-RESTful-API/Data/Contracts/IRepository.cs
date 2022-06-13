@@ -1,18 +1,19 @@
-﻿using System.Linq.Expressions;
+﻿namespace Data.Contracts;
 
-namespace Data.Contracts;
-
-public interface IRepository<TEntity> where TEntity : class
+/// <summary>
+/// General contract [Repository - Declaration]
+/// </summary>
+public interface IRepository<TEntity, TNumericStructure> where TEntity : class where TNumericStructure : struct
 {
-    Task<IEnumerable<TEntity>>? GetAllAsync(int pageNumber, int pageSize, string[]? properties = null, Expression<Func<TEntity, bool>>? filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? sort = null);
+    Task<IEnumerable<TEntity>>? GetAllAsync(TNumericStructure pageNumber, TNumericStructure pageSize, string[]? properties = null, Expression<Func<TEntity, bool>>? filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? sort = null);
 
-    Task<int> CountAllAsync(int pageNumber, int pageSize, string[]? properties = null, Expression<Func<TEntity, bool>>? filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? sort = null);
+    Task<int> CountAllAsync(TNumericStructure pageNumber, TNumericStructure pageSize, string[]? properties = null, Expression<Func<TEntity, bool>>? filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? sort = null);
 
-    Task<TEntity>? GetFirstOrDefaultAsync(string[]? properties = null, Expression<Func<TEntity, bool>>? filter = null, bool? changeTracking = null);
+    Task<TEntity>? GetFirstOrDefaultAsync(Expression<Func<TEntity, bool>> filter, string[]? properties = null, bool changeTracking = false);
 
-    Task<TEntity>? GetByIdAsync(int entityId, bool? changesTracking = null);
+    Task<TEntity>? GetByIdAsync(TNumericStructure entityId, string[]? properties = null, bool changeTracking = false);
 
-    Task AddAsync (TEntity entity);
+    Task AddAsync(TEntity entity);
 
     void Update(TEntity entity);
 
