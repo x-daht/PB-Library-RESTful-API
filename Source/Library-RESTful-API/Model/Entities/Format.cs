@@ -28,9 +28,4 @@ public sealed class Format
         FormatId = formatId;
         Name = name;
     }
-
-    /// <summary>
-    /// Data transfer object constructor [DTO - Input]
-    /// </summary>
-    public Format(string name) => Name = name;
 }
